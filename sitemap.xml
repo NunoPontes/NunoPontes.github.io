@@ -6,22 +6,22 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
-  <loc>http://nunopontes.me/</loc>
-  <lastmod>2019-02-14T19:01:19+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <loc>https://nunopontes.me/</loc>
+  <lastmod>2023-03-19T11:18:26+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://nunopontes.me/index.html</loc>
-  <lastmod>2019-02-14T19:01:19+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <loc>https://nunopontes.me/index.html</loc>
+  <lastmod>2023-03-19T11:18:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://nunopontes.me/about.html</loc>
-  <lastmod>2019-02-14T19:01:19+00:00</lastmod>
-  <changefreq>daily</changefreq>
+  <loc>https://nunopontes.me/assets/pdf/CV_NUNO_PONTES.pdf</loc>
+  <lastmod>2023-03-19T11:18:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
+
 </urlset>
