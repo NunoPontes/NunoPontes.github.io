@@ -9398,6 +9398,29 @@ h6,
   color: transparent;
 }
 
+.text-stroke {
+  display: grid;
+  isolation: isolate;
+  letter-spacing: var(--stroke-letter-spacing, 0.02em);
+}
+
+.text-stroke .text-stroke-bg,
+.text-stroke .text-stroke-fg {
+  grid-area: 1 / 1;
+}
+
+.text-stroke .text-stroke-bg {
+  color: var(--stroke-color, #ffffff);
+  filter: var(--stroke-filter, url(#text-dilate-1));
+  z-index: 0;
+}
+
+.text-stroke .text-stroke-fg {
+  color: var(--stroke-fill, #ffffff);
+  position: relative;
+  z-index: 1;
+}
+
 .btn {
   padding: 10px 25px;
   border-radius: 100px;

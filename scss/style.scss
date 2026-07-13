@@ -56,6 +56,37 @@ h6,
   color: transparent;
 }
 
+// Faux text outline built from two stacked solid-color copies instead of
+// -webkit-text-stroke, which rasterizes stray diagonal lines through bold
+// glyphs in Chrome/Safari. The back copy (stroke color) is dilated a couple
+// pixels via an SVG feMorphology filter (defined once in index.html) and the
+// front copy (background color) sits exactly on top at normal size, so only
+// a thin, uniform sliver of the back copy peeks out as an "outline".
+.text-stroke {
+  display: grid;
+  isolation: isolate;
+  // Compensates for the dilate filter eating into tightly-kerned pairs
+  // (e.g. "NT", "TE", "ES"), which otherwise look pinched vs. looser pairs.
+  letter-spacing: var(--stroke-letter-spacing, 0.02em);
+}
+
+.text-stroke .text-stroke-bg,
+.text-stroke .text-stroke-fg {
+  grid-area: 1 / 1;
+}
+
+.text-stroke .text-stroke-bg {
+  color: var(--stroke-color, #ffffff);
+  filter: var(--stroke-filter, url(#text-dilate-1));
+  z-index: 0;
+}
+
+.text-stroke .text-stroke-fg {
+  color: var(--stroke-fill, #ffffff);
+  position: relative;
+  z-index: 1;
+}
+
 .btn {
   padding: 10px 25px;
   border-radius: 100px;

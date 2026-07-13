@@ -14,12 +14,8 @@
       style="border-radius: 100%"
     />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Self-hosted Roboto (static weights, avoids variable-font stroke rendering glitch) -->
+    <link href="assets/fonts/roboto/roboto.css" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link
@@ -42,6 +38,18 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- SVG filters powering .text-stroke headings (see css/style.css) -->
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="text-dilate-1" x="-50%" y="-50%" width="200%" height="200%">
+          <feMorphology operator="dilate" radius="1" />
+        </filter>
+        <filter id="text-dilate-2" x="-50%" y="-50%" width="200%" height="200%">
+          <feMorphology operator="dilate" radius="2" />
+        </filter>
+      </defs>
+    </svg>
+
     <!-- Navbar Start -->
     <nav
       class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
@@ -96,10 +104,11 @@
           <div class="col-lg-7 text-center text-lg-left">
             <h3 class="text-white font-weight-normal mb-3">I'm</h3>
             <h1
-              class="display-3 text-uppercase text-primary mb-2"
-              style="-webkit-text-stroke: 2px #ffffff"
+              class="display-3 text-uppercase mb-2 text-stroke"
+              style="--stroke-color: #ffffff; --stroke-fill: #2596be; --stroke-filter: url(#text-dilate-2); --stroke-letter-spacing: 0.04em"
             >
-              Nuno Pontes
+              <span class="text-stroke-bg" aria-hidden="true">Nuno Pontes</span>
+              <span class="text-stroke-fg">Nuno Pontes</span>
             </h1>
             <h1
               class="typed-text-output d-inline font-weight-lighter text-white"
@@ -153,10 +162,11 @@
           class="position-relative d-flex align-items-center justify-content-center"
         >
           <h1
-            class="display-1 text-uppercase text-white"
-            style="-webkit-text-stroke: 1px #dee2e6"
+            class="display-1 text-uppercase text-stroke"
+            style="--stroke-color: #dee2e6; --stroke-fill: #ffffff; --stroke-filter: url(#text-dilate-1)"
           >
-            About
+            <span class="text-stroke-bg" aria-hidden="true">About</span>
+            <span class="text-stroke-fg">About</span>
           </h1>
           <h1 class="position-absolute text-uppercase text-primary">
             About Me
@@ -196,10 +206,11 @@
           class="position-relative d-flex align-items-center justify-content-center"
         >
           <h1
-            class="display-1 text-uppercase text-white"
-            style="-webkit-text-stroke: 1px #dee2e6"
+            class="display-1 text-uppercase text-stroke"
+            style="--stroke-color: #dee2e6; --stroke-fill: #ffffff; --stroke-filter: url(#text-dilate-1)"
           >
-            Experience
+            <span class="text-stroke-bg" aria-hidden="true">Experience</span>
+            <span class="text-stroke-fg">Experience</span>
           </h1>
           <h1 class="position-absolute text-uppercase text-primary">
             My Experience
@@ -331,10 +342,11 @@
           class="position-relative d-flex align-items-center justify-content-center"
         >
           <h1
-            class="display-1 text-uppercase text-white"
-            style="-webkit-text-stroke: 1px #dee2e6"
+            class="display-1 text-uppercase text-stroke"
+            style="--stroke-color: #dee2e6; --stroke-fill: #ffffff; --stroke-filter: url(#text-dilate-1)"
           >
-            Portfolio
+            <span class="text-stroke-bg" aria-hidden="true">Portfolio</span>
+            <span class="text-stroke-fg">Portfolio</span>
           </h1>
           <h1 class="position-absolute text-uppercase text-primary">
             My Portfolio
@@ -1129,10 +1141,11 @@
           class="position-relative d-flex align-items-center justify-content-center"
         >
           <h1
-            class="display-1 text-uppercase text-white"
-            style="-webkit-text-stroke: 1px #dee2e6"
+            class="display-1 text-uppercase text-stroke"
+            style="--stroke-color: #dee2e6; --stroke-fill: #ffffff; --stroke-filter: url(#text-dilate-1)"
           >
-            Contact
+            <span class="text-stroke-bg" aria-hidden="true">Contact</span>
+            <span class="text-stroke-fg">Contact</span>
           </h1>
           <h1 class="position-absolute text-uppercase text-primary">
             Contact Me
