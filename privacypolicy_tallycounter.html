@@ -28,9 +28,9 @@
 <ul>
   <li>There are no accounts. I do not collect your name, email, contacts, photos or location.</li>
   <li>Your counters and counts stay on your device. I never receive them.</li>
-  <li>The app has no ads and no tracking across other apps or websites.</li>
+  <li>The free version shows one banner ad (Google AdMob). Pro removes it. Where the law asks for it, the app asks for your consent first.</li>
   <li>The app sends anonymous usage events and crash reports to Google Firebase, and checks if your version is still allowed. You can turn the usage events and crash reports off in Settings.</li>
-  <li>The app asks for the internet permission, only for the things in this list.</li>
+  <li>The app asks for the internet permission, for ads, usage events, crash reports and the version check.</li>
 </ul>
 
 <h2>Information that stays on your device</h2>
@@ -52,10 +52,15 @@
 <p>The Pro upgrade is bought through Google Play. Google Play handles the payment and your payment details. The app does not see your card or account details. The app asks Google Play only whether you own Pro, so it can unlock the Pro features. The app keeps a yes or no answer on your device, so Pro keeps working when you are offline.</p>
 
 <h2>Permissions</h2>
-<p>The app asks for the internet and network state permissions, for the Google Play billing permission (to buy and restore Pro), and for two ordinary system permissions that the Firebase libraries use to send data in the background (keep the device awake briefly, and read the Google Play install source). It does not use the advertising ID. It does not use the camera, microphone, location, contacts or storage permissions.</p>
+<p>The app asks for the internet and network state permissions, for the Google Play billing permission (to buy and restore Pro), for the advertising ID permission (ads in the free version), and for two ordinary system permissions that the Firebase libraries use to send data in the background (keep the device awake briefly, and read the Google Play install source). It does not use the camera, microphone, location, contacts or storage permissions.</p>
 
 <h2>Version check (Firebase Remote Config)</h2>
 <p>The app uses Firebase Remote Config, a service of Google, to learn which app versions are still allowed. If your version is too old or has a serious problem, the app asks you to update. The service does not receive your counters, counts or any content of the app. Google receives a Firebase installation ID and basic device and app information (for example the app version, the device model and the Android version) to answer the request. Google handles this data under its own privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. I use the answer only to show the update message.</p>
+
+<h2>Ads (Google AdMob, free version)</h2>
+<p>The free version shows one banner ad at the bottom of the counter list. It never shows ads on the counter screen, in the widget or on the watch. The Pro upgrade removes the ads, and a Pro user does not start the ads library.</p>
+<p>Ads come from Google AdMob. To show and measure ads, Google can receive your advertising ID, your IP address (and the approximate location it shows), information about the ads you see and click, and basic device and app information. It can use this to show ads that fit your interests, if you allow it. The app never gives Google your counters, counts or names. You can reset or delete your advertising ID, and turn off ad personalization, in your phone&rsquo;s Settings → Google → Ads.</p>
+<p>In the European Economic Area, the United Kingdom and some other places, the app asks for your consent before it requests ads or collects usage data, through Google&rsquo;s consent message. You can change your answer at any time in <em>Settings → Privacy choices</em>. If you say no, the app can still show ads that are not personalized, and sends no usage events or crash reports. Google&rsquo;s privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. How Google uses data from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.</p>
 
 <h2>Usage events and crash reports (Firebase Analytics and Crashlytics)</h2>
 <p>To learn which features people use and to fix crashes, the app uses Firebase Analytics and Firebase Crashlytics, services of Google. You can turn this off at any time in <em>Settings → Share usage data</em>. When it is off, the app sends no usage events and no crash reports.</p>
