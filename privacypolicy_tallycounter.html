@@ -20,7 +20,7 @@
 <body>
 <main>
 <h1>Tally Counter – Privacy Policy</h1>
-<p class="muted">Last updated: 6 November 2026</p>
+<p class="muted">Last updated: 11 November 2026</p>
 
 <p>Tally Counter (“the app”) is a counter for Android phones and Wear OS watches. This policy explains what information the app uses and what choices you have.</p>
 
@@ -29,7 +29,8 @@
   <li>There are no accounts. I do not collect your name, email, contacts, photos or location.</li>
   <li>Your counters and counts stay on your device. I never receive them.</li>
   <li>The app has no ads, no analytics and no tracking.</li>
-  <li>The app asks for no Android permissions.</li>
+  <li>The app asks Google Firebase once in a while if your version is still allowed. This is the only thing it sends.</li>
+  <li>The app asks for the internet permission, only for that version check.</li>
 </ul>
 
 <h2>Information that stays on your device</h2>
@@ -51,7 +52,10 @@
 <p>The Pro upgrade is bought through Google Play. Google Play handles the payment and your payment details. The app does not see your card or account details. The app asks Google Play only whether you own Pro, so it can unlock the Pro features.</p>
 
 <h2>Permissions</h2>
-<p>The app asks for no permissions. It does not use the camera, microphone, location, contacts or storage permissions.</p>
+<p>The app asks for the internet permission and the network state permission, only for the version check described below. It does not use the camera, microphone, location, contacts or storage permissions.</p>
+
+<h2>Version check (Firebase Remote Config)</h2>
+<p>The app uses Firebase Remote Config, a service of Google, to learn which app versions are still allowed. If your version is too old or has a serious problem, the app asks you to update. The service does not receive your counters, counts or any content of the app. Google receives a Firebase installation ID and basic device and app information (for example the app version, the device model and the Android version) to answer the request. Google handles this data under its own privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. I use the answer only to show the update message.</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children under 13 (or the minimum age in your country). I do not knowingly collect personal information from anyone.</p>
